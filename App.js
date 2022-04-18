@@ -2,9 +2,10 @@ import AppNavigator from './src/routes/AppNavigator'
 import Context from './src/components/context/Context'
 import configureStore from './src/redux/store'
 import rootReducer from './src/redux/reducers/rootReducer'
-import { createStore } from 'redux'
+import { applyMiddleware, createStore } from 'redux'
 import { Provider } from 'react-redux'
-const store = createStore(rootReducer)
+import thunk from 'redux-thunk'
+const store = createStore(rootReducer, applyMiddleware(thunk))
 // const store = configureStore()
 const AppWrapper = () => {
 

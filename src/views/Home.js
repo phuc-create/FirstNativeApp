@@ -6,7 +6,7 @@ import { styled } from '../styles/styles.global'
 const Home = ({ navigation }) => {
   const LinkControl = [
     { id: 1, title: "New Game", nav: "Start" },
-    { id: 2, title: "Rank", nav: "Start" },
+    { id: 2, title: "Rank", nav: "Rank" },
     { id: 3, title: "Instruction", nav: "Instruction" },
   ]
   const image = BgApp

@@ -4,7 +4,7 @@ export const Ctx = createContext()
 const Context = ({ children }) => {
   const [initGame, setInitGame] = useState({
     start: false,
-    user: "",
+    user: "Anonymouse",
     level: 0,
     initNumber: 0,
     finish: true,
@@ -41,9 +41,9 @@ const Context = ({ children }) => {
     setInitGame({
       ...initGame,
       start: false,
-      user: "",
-      level: 0,
-      initNumber: 0,
+      user: "Anonymouse",
+      level: "0",
+      initNumber: "0",
       finish: true,
       won: false,
       show: false,
