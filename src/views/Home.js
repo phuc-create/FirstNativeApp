@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar'
-import { Button, ImageBackground, StyleSheet, Text, View } from 'react-native'
+import { Button, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import BgApp from '../images/bg.jpg'
 import { styled } from '../styles/styles.global'
 
@@ -19,13 +19,14 @@ const Home = ({ navigation }) => {
       <View style={styles.option}>
         {LinkControl.map(link => {
           return (
-            <Button
+            <TouchableOpacity
               key={link.id}
               onPress={() => onPressHandler(link.nav)}
-              title={link.title}
-              // style={styles.button}
-              color="#fff"
-            />
+              style={styles.button}
+
+            >
+              <Text style={{ color: "#fff", textAlign: "center", fontSize: 20 }}>{link.title}</Text>
+            </TouchableOpacity>
           )
         })}
       </View>
@@ -67,9 +68,8 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   button: {
-    fontSize: 20,
-    color: "#fff",
-    textDecorationLine: "underline"
+    backgroundColor: "transparent",
+    marginBottom: 20
   }
 })
 

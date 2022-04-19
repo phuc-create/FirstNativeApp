@@ -2,6 +2,8 @@
   "expo": {
     "name": "FirstNativeApp",
     "slug": "FirstNativeApp",
+    "privacy": "public",
+    "description": "An app of Sam",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -17,13 +19,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sam.findit"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/searching.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.sam.findit"
     },
     "web": {
       "favicon": "./assets/favicon.png"
